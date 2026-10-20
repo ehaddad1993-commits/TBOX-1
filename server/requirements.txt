@@ -1,0 +1,5 @@
+# The server core runs on the Python 3.10+ standard library alone.
+# These optional packages enable features; install them for production:
+openpyxl>=3.1      # Excel exports
+reportlab>=4.0     # PDF exports
+cryptography>=42   # encrypts stored device credentials / certificates (Fernet)

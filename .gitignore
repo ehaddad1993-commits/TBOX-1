@@ -1,0 +1,9 @@
+data/
+gateway_data/
+gateway.json
+__pycache__/
+*.pyc
+*.db
+*.db-wal
+*.db-shm
+.env

@@ -1,0 +1,18 @@
+{
+  "id": "socomec-energy-meter",
+  "name": "Socomec energy meter",
+  "manufacturer": "Socomec",
+  "model": "(e.g. DIRIS / COUNTIS - select your model)",
+  "category": "energy_meter",
+  "protocol": "modbus_rtu",
+  "source": "gateway",
+  "status": "template",
+  "defaults": {
+    "baud_rate": 19200,
+    "parity": "E",
+    "stop_bits": 1,
+    "slave_id": 5
+  },
+  "notes": "TEMPLATE - NO REGISTERS INCLUDED. Register addresses, scaling and data types differ per model and firmware; load them from the official Socomec Modbus communication document for your exact model, then import them with Tags > Import CSV. TBox will not guess register addresses.",
+  "tags": []
+}

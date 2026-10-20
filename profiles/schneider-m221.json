@@ -1,0 +1,101 @@
+{
+  "id": "schneider-m221",
+  "name": "Schneider Electric Modicon M221 (starter)",
+  "manufacturer": "Schneider Electric",
+  "model": "Modicon M221",
+  "category": "plc",
+  "protocol": "modbus_tcp",
+  "source": "gateway",
+  "status": "starter",
+  "defaults": {
+    "port": 502,
+    "slave_id": 1
+  },
+  "notes": "STARTER ONLY - NOT VERIFIED ON YOUR HARDWARE. Assumes the M221 Modbus TCP server maps memory words %MWn to holding register n and memory bits %Mn to coil n. Confirm in the M221 Modbus documentation and in your SoMachine Basic program (and that Ethernet/Modbus TCP is enabled on the controller), then read a known value before trusting any tag. Add your own tags for the %MW/%M variables used by your program.",
+  "tags": [
+    {
+      "name": "MW0",
+      "unit": "",
+      "category": "plc",
+      "table_type": "holding",
+      "address": 0,
+      "data_type": "uint16",
+      "byte_order": "ABCD",
+      "scale": 1,
+      "aggregation": "avg",
+      "log_interval_s": 10,
+      "access": "R",
+      "desc": "Memory word %MW0"
+    },
+    {
+      "name": "MW1",
+      "unit": "",
+      "category": "plc",
+      "table_type": "holding",
+      "address": 1,
+      "data_type": "uint16",
+      "byte_order": "ABCD",
+      "scale": 1,
+      "aggregation": "avg",
+      "log_interval_s": 10,
+      "access": "R",
+      "desc": "Memory word %MW1"
+    },
+    {
+      "name": "MW2",
+      "unit": "",
+      "category": "plc",
+      "table_type": "holding",
+      "address": 2,
+      "data_type": "uint16",
+      "byte_order": "ABCD",
+      "scale": 1,
+      "aggregation": "avg",
+      "log_interval_s": 10,
+      "access": "R",
+      "desc": "Memory word %MW2"
+    },
+    {
+      "name": "MW3",
+      "unit": "",
+      "category": "plc",
+      "table_type": "holding",
+      "address": 3,
+      "data_type": "uint16",
+      "byte_order": "ABCD",
+      "scale": 1,
+      "aggregation": "avg",
+      "log_interval_s": 10,
+      "access": "R",
+      "desc": "Memory word %MW3"
+    },
+    {
+      "name": "M0",
+      "unit": "",
+      "category": "plc",
+      "table_type": "coil",
+      "address": 0,
+      "data_type": "bool",
+      "byte_order": "ABCD",
+      "scale": 1,
+      "aggregation": "avg",
+      "log_interval_s": 10,
+      "access": "R",
+      "desc": "Memory bit %M0"
+    },
+    {
+      "name": "M1",
+      "unit": "",
+      "category": "plc",
+      "table_type": "coil",
+      "address": 1,
+      "data_type": "bool",
+      "byte_order": "ABCD",
+      "scale": 1,
+      "aggregation": "avg",
+      "log_interval_s": 10,
+      "access": "R",
+      "desc": "Memory bit %M1"
+    }
+  ]
+}

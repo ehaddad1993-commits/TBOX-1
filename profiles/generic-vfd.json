@@ -1,0 +1,18 @@
+{
+  "id": "generic-vfd",
+  "name": "Variable-frequency drive (generic)",
+  "manufacturer": "",
+  "model": "",
+  "category": "vfd",
+  "protocol": "modbus_rtu",
+  "source": "gateway",
+  "status": "template",
+  "defaults": {
+    "baud_rate": 9600,
+    "parity": "N",
+    "stop_bits": 1,
+    "slave_id": 1
+  },
+  "notes": "TEMPLATE - NO REGISTERS INCLUDED. Register addresses, scaling and data types differ per model and firmware; load them from the official VFD manufacturer Modbus document for your exact model, then import them with Tags > Import CSV. TBox will not guess register addresses.",
+  "tags": []
+}

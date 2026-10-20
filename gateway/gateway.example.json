@@ -1,0 +1,10 @@
+{
+  "server_url": "https://tbox.example.com",
+  "token": "PASTE-THE-GATEWAY-TOKEN-SHOWN-ONCE-IN-TBOX",
+  "state_dir": "gateway_data",
+  "heartbeat_s": 10,
+  "config_refresh_s": 15,
+  "verify_tls": true,
+  "allow_writes": false,
+  "log_level": "INFO"
+}

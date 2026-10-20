@@ -1,0 +1,33 @@
+# Render Blueprint: New > Blueprint > pick this repository.
+# Gives you https://<name>.onrender.com with automatic HTTPS.
+services:
+  - type: web
+    name: tbox
+    runtime: python
+    plan: starter            # needed for the persistent disk below (the free plan has NO disk: data would be lost on every deploy/restart)
+    region: frankfurt        # pick the region closest to you / your sites
+    buildCommand: pip install -r server/requirements.txt
+    startCommand: python server/run_server.py
+    healthCheckPath: /api/health
+    autoDeploy: true
+    disk:
+      name: tbox-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.3
+      - key: TBOX_DATA_DIR
+        value: /var/data
+      - key: TBOX_HOST
+        value: 0.0.0.0
+      - key: TBOX_TRUST_PROXY
+        value: "1"
+      - key: TBOX_SEED_DEMO
+        value: "0"
+      - key: TBOX_SIMULATOR
+        value: "0"
+      - key: TBOX_SECRET
+        generateValue: true
+      - key: TBOX_ADMIN_PASSWORD
+        sync: false           # Render asks you for it when you create the blueprint

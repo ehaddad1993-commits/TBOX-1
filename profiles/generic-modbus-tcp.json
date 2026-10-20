@@ -1,0 +1,16 @@
+{
+  "id": "generic-modbus-tcp",
+  "name": "Generic Modbus TCP device",
+  "manufacturer": "",
+  "model": "",
+  "category": "other",
+  "protocol": "modbus_tcp",
+  "source": "gateway",
+  "status": "template",
+  "defaults": {
+    "port": 502,
+    "slave_id": 1
+  },
+  "notes": "Empty profile: add tags yourself or import a CSV register map.",
+  "tags": []
+}

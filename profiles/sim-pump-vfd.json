@@ -1,0 +1,210 @@
+{
+  "id": "sim-pump-vfd",
+  "name": "SIMULATED pump with VFD",
+  "manufacturer": "TBox",
+  "model": "Simulated pump/VFD",
+  "category": "vfd",
+  "protocol": "modbus_tcp",
+  "source": "simulated",
+  "status": "simulated",
+  "notes": "Generated test data. Not a real device.",
+  "tags": [
+    {
+      "name": "Pump Running",
+      "description": "",
+      "category": "status",
+      "unit": "",
+      "table_type": "holding",
+      "data_type": "bool",
+      "aggregation": "avg",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "square",
+        "period_s": 900,
+        "duty": 0.7
+      },
+      "access": "R",
+      "address": 0
+    },
+    {
+      "name": "VFD Frequency",
+      "description": "",
+      "category": "frequency",
+      "unit": "Hz",
+      "table_type": "holding",
+      "data_type": "float32",
+      "aggregation": "avg",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "sine",
+        "base": 38,
+        "amp": 8,
+        "period_s": 200,
+        "noise": 0.2,
+        "phase": 0
+      },
+      "access": "R",
+      "disp_min": 0,
+      "disp_max": 60,
+      "address": 1
+    },
+    {
+      "name": "VFD Output Current",
+      "description": "",
+      "category": "current",
+      "unit": "A",
+      "table_type": "holding",
+      "data_type": "float32",
+      "aggregation": "avg",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "sine",
+        "base": 22,
+        "amp": 6,
+        "period_s": 200,
+        "noise": 0.3,
+        "phase": 0
+      },
+      "access": "R",
+      "hi": 34,
+      "deadband": 1,
+      "disp_min": 0,
+      "disp_max": 45,
+      "address": 3
+    },
+    {
+      "name": "VFD DC Bus Voltage",
+      "description": "",
+      "category": "voltage",
+      "unit": "V",
+      "table_type": "holding",
+      "data_type": "float32",
+      "aggregation": "avg",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "sine",
+        "base": 540,
+        "amp": 6,
+        "period_s": 150,
+        "noise": 1,
+        "phase": 0
+      },
+      "access": "R",
+      "disp_min": 450,
+      "disp_max": 650,
+      "address": 5
+    },
+    {
+      "name": "Motor Temperature",
+      "description": "",
+      "category": "temperature",
+      "unit": "\u00b0C",
+      "table_type": "holding",
+      "data_type": "float32",
+      "aggregation": "avg",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "sine",
+        "base": 55,
+        "amp": 8,
+        "period_s": 400,
+        "noise": 0.2,
+        "phase": 0
+      },
+      "access": "R",
+      "hi": 75,
+      "deadband": 1,
+      "disp_min": 20,
+      "disp_max": 110,
+      "address": 7
+    },
+    {
+      "name": "Discharge Pressure",
+      "description": "",
+      "category": "pressure",
+      "unit": "bar",
+      "table_type": "holding",
+      "data_type": "float32",
+      "aggregation": "avg",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "sine",
+        "base": 4.5,
+        "amp": 0.8,
+        "period_s": 150,
+        "noise": 0.05,
+        "phase": 0
+      },
+      "access": "R",
+      "lo": 2.5,
+      "deadband": 0.2,
+      "disp_min": 0,
+      "disp_max": 8,
+      "address": 9
+    },
+    {
+      "name": "Flow",
+      "description": "",
+      "category": "flow",
+      "unit": "m\u00b3/h",
+      "table_type": "holding",
+      "data_type": "float32",
+      "aggregation": "avg",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "sine",
+        "base": 42,
+        "amp": 12,
+        "period_s": 150,
+        "noise": 0.5,
+        "phase": 0
+      },
+      "access": "R",
+      "disp_min": 0,
+      "disp_max": 80,
+      "address": 11
+    },
+    {
+      "name": "Tank Level",
+      "description": "Demo threshold trips periodically",
+      "category": "level",
+      "unit": "%",
+      "table_type": "holding",
+      "data_type": "float32",
+      "aggregation": "avg",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "sine",
+        "base": 50,
+        "amp": 32,
+        "period_s": 360,
+        "noise": 0.2,
+        "phase": 0
+      },
+      "access": "R",
+      "lo": 25,
+      "hi": 85,
+      "deadband": 2,
+      "disp_min": 0,
+      "disp_max": 100,
+      "address": 13
+    },
+    {
+      "name": "Pump Energy",
+      "description": "",
+      "category": "energy",
+      "unit": "kWh",
+      "table_type": "holding",
+      "data_type": "uint32",
+      "aggregation": "counter",
+      "log_interval_s": 60,
+      "sim": {
+        "kind": "counter",
+        "rate_per_h": 9,
+        "start": 8800
+      },
+      "access": "R",
+      "address": 15
+    }
+  ]
+}

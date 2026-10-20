@@ -1,0 +1,22 @@
+# /etc/systemd/system/tbox-server.service   (Linux VPS)
+[Unit]
+Description=TBox server
+After=network-online.target
+
+[Service]
+User=tbox
+WorkingDirectory=/opt/tbox/server
+Environment=TBOX_DATA_DIR=/var/lib/tbox
+Environment=TBOX_HOST=127.0.0.1
+Environment=TBOX_TRUST_PROXY=1
+Environment=TBOX_SIMULATOR=0
+Environment=TBOX_SEED_DEMO=0
+EnvironmentFile=-/etc/tbox/tbox.env
+ExecStart=/usr/bin/python3 run_server.py
+Restart=always
+NoNewPrivileges=true
+ProtectSystem=full
+ReadWritePaths=/var/lib/tbox
+
+[Install]
+WantedBy=multi-user.target

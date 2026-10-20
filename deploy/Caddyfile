@@ -1,0 +1,6 @@
+# Automatic HTTPS (Let's Encrypt) in front of TBox.
+{$TBOX_DOMAIN} {
+    encode gzip
+    reverse_proxy tbox:8080
+    header Strict-Transport-Security "max-age=31536000"
+}

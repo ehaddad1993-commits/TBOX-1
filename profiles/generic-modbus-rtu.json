@@ -1,0 +1,18 @@
+{
+  "id": "generic-modbus-rtu",
+  "name": "Generic Modbus RTU (RS-485) device",
+  "manufacturer": "",
+  "model": "",
+  "category": "other",
+  "protocol": "modbus_rtu",
+  "source": "gateway",
+  "status": "template",
+  "defaults": {
+    "baud_rate": 9600,
+    "parity": "N",
+    "stop_bits": 1,
+    "slave_id": 1
+  },
+  "notes": "Empty profile: add tags yourself or import a CSV register map. Requires an Edge Gateway with an RS-485 adapter and pyserial.",
+  "tags": []
+}

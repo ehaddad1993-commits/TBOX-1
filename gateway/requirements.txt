@@ -1,0 +1,2 @@
+# The gateway core (Modbus TCP, buffering, uplink) needs only the Python 3.10+ standard library.
+pyserial>=3.5      # required for Modbus RTU over RS-485 serial adapters

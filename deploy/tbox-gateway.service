@@ -1,0 +1,14 @@
+# /etc/systemd/system/tbox-gateway.service   (Linux gateway computer)
+[Unit]
+Description=TBox Edge Gateway
+After=network-online.target
+
+[Service]
+User=tbox
+WorkingDirectory=/opt/tbox/gateway
+ExecStart=/usr/bin/python3 run_gateway.py --config /etc/tbox/gateway.json
+Restart=always
+SupplementaryGroups=dialout
+
+[Install]
+WantedBy=multi-user.target

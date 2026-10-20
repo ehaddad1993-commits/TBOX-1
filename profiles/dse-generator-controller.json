@@ -1,0 +1,18 @@
+{
+  "id": "dse-generator-controller",
+  "name": "Deep Sea Electronics generator controller",
+  "manufacturer": "Deep Sea Electronics",
+  "model": "(select your module, e.g. a DSE7xxx/DSE8xxx series)",
+  "category": "generator",
+  "protocol": "modbus_rtu",
+  "source": "gateway",
+  "status": "template",
+  "defaults": {
+    "baud_rate": 9600,
+    "parity": "N",
+    "stop_bits": 2,
+    "slave_id": 10
+  },
+  "notes": "TEMPLATE - NO REGISTERS INCLUDED. Register addresses, scaling and data types differ per model and firmware; load them from the official DSE Modbus / 'Gencomm' register document for your exact model, then import them with Tags > Import CSV. TBox will not guess register addresses.",
+  "tags": []
+}
